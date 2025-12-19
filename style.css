@@ -263,15 +263,42 @@ h1, h2, h3 {
   gap: 50px;
 }
 
+.form-group {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
   background: #020617;
   color: #fff;
+  font-size: 15px;
+  outline: none;
 }
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #9ef01a;
+  box-shadow: 0 0 0 2px rgba(158,240,26,0.2);
+}
+.form-group label {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
 
 /* ================= FOOTER ================= */
 .site-footer {
