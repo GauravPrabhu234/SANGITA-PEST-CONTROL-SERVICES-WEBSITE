@@ -390,6 +390,84 @@ h1, h2, h3 {
   font-weight: 800;
 }
 
+/* ================= TESTIMONIALS SLIDER ================= */
+.testimonials-section {
+  padding: 100px 0;
+  background: #0f172a;
+}
+
+.testimonial-slider {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.testimonial-card {
+  background: #020617;
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  text-align: center;
+  display: none;
+}
+
+.testimonial-card.active {
+  display: block;
+}
+
+.testimonial-card .stars {
+  color: #facc15;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.testimonial-card h4 {
+  color: #9ef01a;
+  font-size: 17px;
+}
+
+.testimonial-card span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+
+/* ================= REVIEW FORM ================= */
+.review-section {
+  padding: 100px 0;
+  background: #020617;
+}
+
+.review-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #0f172a;
+  color: #fff;
+}
+
+.review-form select {
+  cursor: pointer;
+}
+
+
 /* ================= CONTACT ================= */
 .contact-section {
   padding: 90px 0;

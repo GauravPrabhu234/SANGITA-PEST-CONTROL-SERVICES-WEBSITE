@@ -273,6 +273,75 @@
   </div>
 </section>
 
+<!-- ================= TESTIMONIALS SLIDER ================= -->
+<section class="testimonials-section">
+  <div class="container">
+
+    <h2 class="section-heading">What Our Customers Say</h2>
+
+    <div class="testimonial-slider">
+
+      <div class="testimonial-card active">
+        <div class="stars">★★★★★</div>
+        <p>
+          Excellent service! Cockroach problem completely gone within a few days.
+          Very professional and safe treatment.
+        </p>
+        <h4>— Ramesh Patil</h4>
+        <span>Dahanu Road</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          Termite treatment worked perfectly. Team was punctual and explained
+          everything clearly.
+        </p>
+        <h4>— Sneha Deshmukh</h4>
+        <span>Masoli</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★☆</div>
+        <p>
+          Rodent issue solved quickly. Good service and reasonable pricing.
+        </p>
+        <h4>— Amit Shah</h4>
+        <span>Dahanu</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= REVIEW FORM ================= -->
+<section class="review-section">
+  <div class="container">
+
+    <h2 class="section-heading">Submit Your Review</h2>
+
+    <form class="review-form" onsubmit="addReview(event)">
+
+      <input type="text" id="reviewName" placeholder="Your Name" required>
+
+      <select id="reviewStars" required>
+        <option value="">Rating</option>
+        <option value="★★★★★">★★★★★</option>
+        <option value="★★★★☆">★★★★☆</option>
+        <option value="★★★☆☆">★★★☆☆</option>
+      </select>
+
+      <textarea id="reviewMessage" rows="4" placeholder="Your Review" required></textarea>
+
+      <button type="submit" class="btn-primary">Submit Review</button>
+
+    </form>
+
+  </div>
+</section>
+
+
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="contact-section">
@@ -329,7 +398,19 @@
     document.querySelector(".site-header")
       .classList.toggle("scrolled", window.scrollY > 50);
   });
+  
 </script>
+<script>
+  let currentTestimonial = 0;
+  const testimonials = document.querySelectorAll(".testimonial-card");
+
+  setInterval(() => {
+    testimonials[currentTestimonial].classList.remove("active");
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    testimonials[currentTestimonial].classList.add("active");
+  }, 4000); // changes every 4 seconds
+</script>
+
 
 </body>
 </html>
